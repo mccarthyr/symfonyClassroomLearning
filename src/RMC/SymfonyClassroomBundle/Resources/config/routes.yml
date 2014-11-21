@@ -1,0 +1,5 @@
+rmc_bike_page:
+    type: rest
+    prefix: /v1
+    resource: "RMC\SymfonyClassroomBundle\Controller\BikeController"
+    name_prefix: api_1_ # naming collision

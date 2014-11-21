@@ -1,0 +1,10 @@
+# RMC/SymfonyClassroomBundle/Resources/config/validation.yml
+RMC\SymfonyClassroomBundle\Entity\Bike:
+    properties:
+        name:
+            - NotBlank: ~
+        price:
+            - NotBlank: ~
+            - Type: float
+        description:
+            - NotBlank: ~

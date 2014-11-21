@@ -1,0 +1,6 @@
+rmc_symfony_classroom_homepage:
+    #path: /bikeShop/bike/create
+    #defaults: { _controller: RMCSymfonyClassroomBundle:Bike:createBike }
+
+    #resource: "@RMCSymfonyClassroomBundle/Controller/BikeController.php"
+    #type: annotation

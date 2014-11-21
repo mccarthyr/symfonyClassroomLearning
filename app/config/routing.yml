@@ -1,0 +1,15 @@
+#rmc_symfony_classroom:
+#    resource: "@RMCSymfonyClassroomBundle/Resources/config/routing.yml"
+#    prefix:   /
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+user:
+    resource: "@RMCSymfonyClassroomBundle/Controller/UserController.php"
+    type:     rest
+
+rmc_bike:
+    type: rest
+    prefix: /api
+    resource: "@RMCSymfonyClassroomBundle/Resources/config/routes.yml"
