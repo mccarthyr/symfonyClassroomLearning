@@ -3,7 +3,7 @@
 namespace RMC\SymfonyClassroomBundle\Controller;
 
 use FOS\RestBundle\Controller\FOSRestController;
-use FOS\RestBundle\View\View;
+//use FOS\RestBundle\View\View;
 use RMC\SymfonyClassroomBundle\Form\Type\BikeType;
 use RMC\SymfonyClassroomBundle\RMCSymfonyClassroomBundle;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -16,8 +16,10 @@ use FOS\RestBundle\View\RouteRedirectView,
     FOS\RestBundle\Controller\Annotations\QueryParam,
     FOS\RestBundle\Request\ParamFetcherInterface,
     FOS\RestBundle\Controller\Annotations\Route,
-    FOS\RestBundle\Controller\Annotations\Prefix;
+    FOS\RestBundle\Controller\Annotations\Prefix,
+    FOS\RestBundle\Controller\Annotations\View;
 
+use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 use Symfony\Component\Routing\Exception\ResourceNotFoundException;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 
@@ -93,12 +95,6 @@ class BikeController extends FOSRestController
             throw new HttpException(400, 'The resource could not be created');
         }
     }
-    /*
-    GET    - /api/v1/bikes/1
-    POST   - /api/v1/bikes
-    PUT    - /api/v1/bikes/2
-    DELETE - /api/v1/bikes/3
-    */
 
     /**
      * Update an existing bike entry
@@ -139,27 +135,34 @@ class BikeController extends FOSRestController
         return $this->handleView($view);
     }
 
+
     /**
      * Delete an existing bike entry
      *
+     * @param $id
      *
+     * @Route(requirements={"id"="\d+"})
+     *
+     * @View(statusCode=204)
      */
+    public function deleteBikeAction($id)
+    {
+
+        $bike = $this -> getDoctrine()->getRepository('RMCSymfonyClassroomBundle:Bike')->find($id);
+        if (is_null($bike)) {
+            throw new ResourceNotFoundException('No such bike exists');
+        }
+        $em  = $this -> getDoctrine()->getManager();
+        $em -> remove($bike);
+        $em -> flush();
+    }
+/*
+    ********************** NOTE NOTE NOTE
+    LOOK TO REPLACE THIS WITH A HANDLER LAYER - CHECK THE COMMENT BUNDLE FOR EXAMPLES AND THE
+    USER BUNDLER HAS A SIMILAR USER MANAGER LAYER ********************
+*/
 
 
-    /*
-    This is the output format in JSON
-    {
-    "code": 201,
-    "message": "The bike has been successfully created",
-    "bike": [
-    {
-        "name": "richardx",
-    "price": 111,
-    "description": "testd"
-    }
-    ]
-    }
-    */
 
 
 
