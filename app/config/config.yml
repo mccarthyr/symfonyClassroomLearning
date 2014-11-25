@@ -88,4 +88,9 @@ fos_rest:
         messages:
             'Symfony\Component\Routing\Exception\ResourceNotFoundException': true
     param_fetcher_listener:  true
+    view:
+        view_response_listener: force
 
+# This has been set so can use the @View annotation in the REST API
+sensio_framework_extra:
+    view: { annotations: false }
