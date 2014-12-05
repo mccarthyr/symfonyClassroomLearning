@@ -7,3 +7,9 @@ services:
         class: RMC\SymfonyClassroomBundle\Form\Type\BikeType
         tags:
             - { name: form.type, alias: createBike }
+
+
+    rmc_symfonyclassroom.bike_sale_manager:
+      class: RMC\SymfonyClassroomBundle\Entity\BikeSaleManager
+      arguments:
+          - @doctrine.orm.default_entity_manager

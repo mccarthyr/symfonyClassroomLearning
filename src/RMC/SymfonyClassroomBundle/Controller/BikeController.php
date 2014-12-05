@@ -29,6 +29,21 @@ use FOS\RestBundle\View\RedirectView;
 use FOS\RestBundle\Request\ParamFetcher;
 use FOS\RestBundle\Controller\Annotations\RequestParam;
 
+/*
+SO NEED TO CREATE A BIKE MANAGER WHICH WILL BE A REPOSITORY MAYBE AND
+REGISTERED AS A FACTORY SERVICE - THIS WILL MAKE TESTING MUCH EASIER...
+
+DEFINITELY NEED TO REMOVE THE DIRECT CALLING OF THE REPOSITORY CODE FROM WITHIN
+THIS CLASS AND INJECT IT IN SO CAN MOCK IT IN TESTS AND WILL REDUCE COUPLING ALSO...
+
+http://php-and-symfony.matthiasnoback.nl/2014/05/inject-a-repository-instead-of-an-entity-manager/
+
+
+maybe if bike has more to it then it can use a custom repository but to get the structure right
+this time will create one that will have a pointless method called findBike() which does what find()
+normally does...
+*/
+
 
 
 class BikeController extends FOSRestController

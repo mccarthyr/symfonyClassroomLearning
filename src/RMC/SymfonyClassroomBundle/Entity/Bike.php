@@ -10,11 +10,12 @@ namespace RMC\SymfonyClassroomBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
+
 /**
  * Class Bike
  * @package RMC\SymfonyClassroomBundle\Entity
  *
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="RMC\SymfonyClassroomBundle\Entity\BikeRepository")
  * @ORM\Table(name="bike")
  */
 class Bike
@@ -41,16 +42,18 @@ class Bike
      */
     protected $description;
 
-/*
-    protected $type;
 
-    protected $frameMaterial;
+    /**
+     * @ORM\ManyToOne(targetEntity="Groupset", inversedBy="bikes")
+     * @ORM\JoinColumn(name="groupset_id", referencedColumnName="id")
+     */
+    protected $groupSet;
 
-    protected $groupset;
-
-    protected $wheels;
-*/
-
+    /**
+     * @ORM\ManyToOne(targetEntity="BikeType", inversedBy="bikes")
+     * @ORM\JoinColumn(name="type_id", referencedColumnName="id")
+     */
+    protected $bikeType;
 
     /**
      * Get id
@@ -129,5 +132,51 @@ class Bike
     public function getDescription()
     {
         return $this->description;
+    }
+
+    /**
+     * Set groupSet
+     *
+     * @param \RMC\SymfonyClassroomBundle\Entity\Groupset $groupSet
+     * @return Bike
+     */
+    public function setGroupSet(\RMC\SymfonyClassroomBundle\Entity\Groupset $groupSet = null)
+    {
+        $this->groupSet = $groupSet;
+
+        return $this;
+    }
+
+    /**
+     * Get groupSet
+     *
+     * @return \RMC\SymfonyClassroomBundle\Entity\Groupset 
+     */
+    public function getGroupSet()
+    {
+        return $this->groupSet;
+    }
+
+    /**
+     * Set bikeType
+     *
+     * @param \RMC\SymfonyClassroomBundle\Entity\BikeType $bikeType
+     * @return Bike
+     */
+    public function setBikeType(\RMC\SymfonyClassroomBundle\Entity\BikeType $bikeType = null)
+    {
+        $this->bikeType = $bikeType;
+
+        return $this;
+    }
+
+    /**
+     * Get bikeType
+     *
+     * @return \RMC\SymfonyClassroomBundle\Entity\BikeType 
+     */
+    public function getBikeType()
+    {
+        return $this->bikeType;
     }
 }

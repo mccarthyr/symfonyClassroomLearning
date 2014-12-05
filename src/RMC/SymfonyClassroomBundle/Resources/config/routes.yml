@@ -3,3 +3,12 @@ rmc_bike_page:
     prefix: /v1
     resource: "RMC\SymfonyClassroomBundle\Controller\BikeController"
     name_prefix: api_1_ # naming collision
+
+
+rmc_bike_sale_page:
+    type: rest
+    prefix: /v1/sale
+    resource: "RMC\SymfonyClassroomBundle\Controller\BikeSaleController"
+    name_prefix: api_sale_1_ # naming collision
+
+
