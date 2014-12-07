@@ -33,4 +33,18 @@ class BikeRepository extends EntityRepository
 
 
 
-} 
+}
+
+
+------------------------------------------------------------------------
+UPDATED VERSION OF THE ABOVE CLASS...
+
+class DoctrineORMBikeRepository extends EntityRepository implements BikeRepositoryInterface
+{
+
+}
+
+interface BikeRepositoryInterface
+{
+    public function findBikeByType($type);
+}
