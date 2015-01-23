@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new FOS\RestBundle\FOSRestBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle(),
+            new SoftwareDesk\BikeTraderAPIBundle\SoftwareDeskBikeTraderAPIBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
