@@ -28,14 +28,9 @@ class BikeRepository extends EntityRepository
         return $query -> getResult();
     }
 
-
-
-
-
-
 }
 
-
+/*
 ------------------------------------------------------------------------
 UPDATED VERSION OF THE ABOVE CLASS...
 
@@ -48,3 +43,4 @@ interface BikeRepositoryInterface
 {
     public function findBikeByType($type);
 }
+*/
