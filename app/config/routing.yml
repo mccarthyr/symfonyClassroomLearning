@@ -1,3 +1,7 @@
+#software_desk_bike_trader_api:
+#    resource: "@SoftwareDeskBikeTraderAPIBundle/Resources/config/routing.yml"
+#    prefix:   /
+
 #rmc_symfony_classroom:
 #    resource: "@RMCSymfonyClassroomBundle/Resources/config/routing.yml"
 #    prefix:   /
@@ -13,3 +17,8 @@ rmc_bike:
     type: rest
     prefix: /api
     resource: "@RMCSymfonyClassroomBundle/Resources/config/routes.yml"
+
+software_desk_bike_trader:
+    type: rest
+    prefix: /api
+    resource: "@SoftwareDeskBikeTraderAPIBundle/Resources/config/routes.yml"
