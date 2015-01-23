@@ -24,7 +24,7 @@ class BikeSaleManager extends BaseBikeSaleManager
      * @var EntityRepository
      */
     protected $repository;
-
+/*
 
     IN REALITY THE BIKE SALE MANAGER IS EVER ONLY GOING TO NEED TO GET THE BIKE CLASS AS
     THAT IS THE ONE THAT SALES ARE ABOUT AND IT IS THE ONE CONNECTED WITH THE NECESSARY REPOSITORY...
@@ -40,7 +40,7 @@ class BikeSaleManager extends BaseBikeSaleManager
     Dependency Inversion Principle -
     It tells us that we should depend on abstractions, not on concretions.
     So, injection in an interface rather than a concrete class...
-
+*/
 
 
     public function __construct(EntityManager $em)
