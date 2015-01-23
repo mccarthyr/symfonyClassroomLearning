@@ -1,0 +1,22 @@
+services:
+#    software_desk_bike_trader_api.example:
+#        class: SoftwareDesk\BikeTraderAPIBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
+
+    software_desk_bike_trader_api.bike_trader_manager:
+        class: SoftwareDesk\BikeTraderAPIBundle\Entity\BikeTraderManager
+        arguments:
+            #- @doctrine.orm.default_entity_manager
+            - @software_desk_bike_trader_api.bike_trader_repository
+
+
+    # Using the Doctrine Factory Service to get our custom repository
+    software_desk_bike_trader_api.bike_trader_repository:
+      #class: Doctrine\ORM\EntityRepository
+      class: SoftwareDesk\BikeTraderAPIBundle\Entity\DoctrineORMBikeTraderRepository
+      #factory_service: doctrine.orm.default_entity_manager
+      factory_service: doctrine.orm.entity_manager
+      factory_method: getRepository
+      arguments:
+          - SoftwareDesk\BikeTraderAPIBundle\Entity\Bicycle
+
