@@ -26,10 +26,23 @@ NEXT STEPS:
 7  - Put in Repository Interface     (DONE)
 8  - Remove ORM Dependency           (DONE)
 9  - Review Manager Registry         (DONE)
-10  - Write Test Case
-11 - Read up Doctrine Fixtures for testing data...
+10  - Write Test Case                (DONE)
+11 - Read up Doctrine Fixtures       (DONE)
 */
-
+/*
+NEXT STEPS: WEEK STARTING 26TH JANUARY
+1  - Unit Tests                                                (DONE)
+2  - Functional Tests                                          (DONE)
+3  - Fixtures
+4  - MongoDB
+5  - Set up other REST methods
+6  - Put in Manager Registry design code
+7  - Set up Tests (unit & functional)
+8  - Documentation bundle
+9  - Build as its own bundle
+10 - Setup on Github and Packagelist
+11 - Write up some notes on previous works (REST , GIT, etc)
+*/
 
 class BikeTraderManager extends BaseBikeTraderManager
 {
@@ -76,7 +89,6 @@ class BikeTraderManager extends BaseBikeTraderManager
         /*$bike = $this -> entityManager -> getRepository('SoftwareDeskBikeTraderAPIBundle:Bicycle')
             -> findBikeByType($type);*/
         $bike = $this -> bikeTraderRepository -> findBikeByType($type);
-
         return $bike;
 
     }
