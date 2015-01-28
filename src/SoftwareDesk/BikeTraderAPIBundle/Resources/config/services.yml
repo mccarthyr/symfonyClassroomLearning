@@ -8,7 +8,7 @@ services:
         arguments:
             #- @doctrine.orm.default_entity_manager
             - @software_desk_bike_trader_api.bike_trader_repository
-
+            #- @software_Desk_bike_trader_api.bike_trader_mongodb_repository
 
     # Using the Doctrine Factory Service to get our custom repository
     software_desk_bike_trader_api.bike_trader_repository:
@@ -20,3 +20,9 @@ services:
       arguments:
           - SoftwareDesk\BikeTraderAPIBundle\Entity\Bicycle
 
+    software_Desk_bike_trader_api.bike_trader_mongodb_repository:
+      class: SoftwareDesk\BikeTraderAPIBundle\Repository\DoctrineODMBikeTraderRepository
+      factory_service: doctrine.odm.mongodb.document_manager
+      factory_method: getRepository
+      arguments:
+          - SoftwareDesk\BikeTraderAPIBundle\Document\Bicycle

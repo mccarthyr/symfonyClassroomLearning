@@ -33,8 +33,8 @@ NEXT STEPS:
 NEXT STEPS: WEEK STARTING 26TH JANUARY
 1  - Unit Tests                                                (DONE)
 2  - Functional Tests                                          (DONE)
-3  - Fixtures
-4  - MongoDB
+3  - Fixtures                                                  (DONE)
+4  - MongoDB                                                   (DONE)
 5  - Set up other REST methods
 6  - Put in Manager Registry design code
 7  - Set up Tests (unit & functional)
@@ -42,6 +42,13 @@ NEXT STEPS: WEEK STARTING 26TH JANUARY
 9  - Build as its own bundle
 10 - Setup on Github and Packagelist
 11 - Write up some notes on previous works (REST , GIT, etc)
+
+*** FURTHER DEVELOPMENTS -  AFTER OTHER BASIC REST METHODS ARE IN PLACE: ***
+DESIGN NEW DB WITH JUST A FEW TABLES
+DO SCHEMA DESIGN OF IT ALSO WITH ONLINE TOOL: http://dbdsgnr.appspot.com/
+PUT THE DOCTRINE ORM CUSTOM REPOSITORY AND INTERFACE IN THE REPOSITORY FOLDER ALSO
+DO UP XML STORAGE MAPPINGS FOR MODEL MAPPING INDEPENDENCE ? (might do as separate bundle due to xml)
+DO UP NEW SERVICES USING SERVICE TAGS AND COMPILER PASS AND CONFIGURATION - think of scenarios.
 */
 
 class BikeTraderManager extends BaseBikeTraderManager

@@ -34,7 +34,7 @@ use Symfony\Component\HttpKernel\Exception\BadRequestHttpException,
 class BikeTraderController extends FOSRestController
 {
     // Example URL
-    // http://symfonyclassroom/app_dev.php/api/v1/bike/type/prestigio
+    // http://symfonyclassroom/app_dev.php/api/v1/trader/bike/type/road
 
     /**
      * @param $type
@@ -57,4 +57,11 @@ class BikeTraderController extends FOSRestController
         $view = $this -> view($bike, 200);
         return $this -> handleView($view);
     }
+
+
+
+
+
+
+
 }

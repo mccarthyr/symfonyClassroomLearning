@@ -64,6 +64,18 @@ doctrine:
         auto_generate_proxy_classes: "%kernel.debug%"
         auto_mapping: true
 
+# Doctrine MonogoDB Configuration
+doctrine_mongodb:
+    connections:
+        default:
+            server: mongodb://localhost:27017
+            options: {}
+    default_database: symfony_classroom
+    document_managers:
+        default:
+            auto_mapping: true
+
+
 # Swiftmailer Configuration
 swiftmailer:
     transport: "%mailer_transport%"
