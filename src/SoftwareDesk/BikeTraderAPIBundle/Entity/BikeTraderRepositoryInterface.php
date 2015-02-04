@@ -8,6 +8,7 @@
 
 namespace SoftwareDesk\BikeTraderAPIBundle\Entity;
 
+use SoftwareDesk\BikeTraderAPIBundle\Model\BicycleInterface;
 
 interface BikeTraderRepositoryInterface
 {
@@ -16,4 +17,16 @@ interface BikeTraderRepositoryInterface
      * @return Bicycle[]
      */
     public function findBikeByType($type);
+
+    public function findBikeById($id);
+
+    public function getPrimaryKeyForEntity($entity);
+
+    public function save(BicycleInterface $bicycle);
+
+    public function update();
+
+    public function delete(BicycleInterface $bicycle);
+
 }
+

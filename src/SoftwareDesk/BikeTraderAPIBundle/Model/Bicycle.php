@@ -17,7 +17,7 @@ namespace SoftwareDesk\BikeTraderAPIBundle\Model;
  * @package SoftwareDesk\BikeTraderAPIBundle\Model
  *
  */
-abstract class Bicycle
+abstract class Bicycle implements BicycleInterface
 {
     /**
      * @var string

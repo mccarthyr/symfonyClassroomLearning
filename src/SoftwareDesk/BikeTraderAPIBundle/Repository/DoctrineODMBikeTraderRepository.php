@@ -4,6 +4,9 @@ namespace SoftwareDesk\BikeTraderAPIBundle\Repository;
 
 use Doctrine\ODM\MongoDB\DocumentRepository;
 use SoftwareDesk\BikeTraderAPIBundle\Entity\BikeTraderRepositoryInterface;
+use SoftwareDesk\BikeTraderAPIBundle\Model\BicycleInterface;
+
+//use SoftwareDesk\BikeTraderAPIBundle\Document\Bicycle;
 
 /**
  * DoctrineODMBikeTraderRepository
@@ -19,13 +22,65 @@ use SoftwareDesk\BikeTraderAPIBundle\Entity\BikeTraderRepositoryInterface;
 class DoctrineODMBikeTraderRepository extends DocumentRepository implements BikeTraderRepositoryInterface
 {
 
+
     public function findBikeByType($type)
     {
-        echo PHP_EOL.'MADE IT TO THE MONGO DB CUSTOM REPOSITORY'.PHP_EOL;
-
         $bike = $this -> getDocumentManager() -> getRepository('SoftwareDeskBikeTraderAPIBundle:Bicycle')
-                ->findOneBy(array('type' => $type));
+                ->findBy(array('type' => $type));
         return $bike;
     }
+
+    /**
+     * @param Bicycle $bicycle
+     *
+     * Put the save method here so do not require an entity manager or
+     * the more general Manager Registry injected into the Bike Trader Manager
+     * class which keep it less coupled.
+     */
+    public function save(BicycleInterface $bicycle)
+    {
+        $em = $this -> getDocumentManager();
+        $em -> persist($bicycle);
+        $em -> flush();
+    }
+
+    public function findBikeById($id)
+    {
+        $bike = $this -> getDocumentManager()->getRepository('SoftwareDeskBikeTraderAPIBundle:Bicycle')
+            ->find($id);
+        return $bike;
+    }
+
+
+    public function getPrimaryKeyForEntity($entity)
+    {
+        $em = $this -> getDocumentManager();
+        $meta = $em -> getClassMetadata(get_class($entity));
+        $identifierArray = $identifier = $meta->getIdentifier();
+
+        // The first element in the array (and the only one) is the primary key.
+        $primaryKey = $identifierArray[0];
+        return $primaryKey;
+    }
+
+
+
+    // ** SEE IF THIS IS THE BEST LOCATION FOR THIS ???
+    // WAIT UNTIL THE MAIN CODE IS REDESIGNED FIRST BEFORE LOOKING AT THIS LOCATION...
+    public function update()
+    {
+        $em = $this -> getDocumentManager();
+        $em -> flush();
+    }
+
+    public function delete(BicycleInterface $bicycle)
+    {
+        $em = $this -> getDocumentManager();
+        $em -> remove($bicycle);
+        $em -> flush();
+    }
+
+
+
 }
 

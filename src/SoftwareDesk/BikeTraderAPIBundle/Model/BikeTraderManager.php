@@ -18,13 +18,13 @@ namespace SoftwareDesk\BikeTraderAPIBundle\Model;
 abstract class BikeTraderManager implements BikeTraderManagerInterface
 {
 
-    abstract public function createBike();
+    abstract public function createBike($bike);
 
     abstract public function retrieveBike(array $retrievalOptions);
 
     abstract public function updateBike();
 
-    abstract public function deleteBike();
+    abstract public function deleteBike($id);
 
 
 }

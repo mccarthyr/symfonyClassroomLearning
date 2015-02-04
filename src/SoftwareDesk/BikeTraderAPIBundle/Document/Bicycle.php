@@ -26,7 +26,7 @@ use SoftwareDesk\BikeTraderAPIBundle\Model\Bicycle as BaseBicycle;
 class Bicycle extends BaseBicycle
 {
     /**
-     * @MongoDB\Id
+     * @MongoDB\Id(strategy="AUTO")
      */
     protected $id;
 
@@ -121,5 +121,17 @@ class Bicycle extends BaseBicycle
     public function getType()
     {
         return $this->type;
+    }
+
+    /**
+     * Set id
+     *
+     * @param object_id $id
+     * @return self
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+        return $this;
     }
 }

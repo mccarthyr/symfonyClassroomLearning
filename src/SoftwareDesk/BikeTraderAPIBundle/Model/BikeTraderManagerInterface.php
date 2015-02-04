@@ -19,13 +19,13 @@ namespace SoftwareDesk\BikeTraderAPIBundle\Model;
 
 interface BikeTraderManagerInterface
 {
-    public function createBike();
+    public function createBike($bike);
 
     public function retrieveBike(array $retrievalOptions);
 
     public function updateBike();
 
-    public function deleteBike();
+    public function deleteBike($id);
 }
 
 
