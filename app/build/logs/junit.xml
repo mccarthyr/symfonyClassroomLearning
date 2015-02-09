@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Project Test Suite" tests="1" assertions="0" failures="0" errors="0" time="0.000578">
+    <testsuite name="RMC\SymfonyClassroomBundle\Tests\Controller\BikeControllerTest" file="/var/www/vhosts/symfonyClassroom/src/RMC/SymfonyClassroomBundle/Tests/Controller/BikeControllerTest.php" namespace="RMC\SymfonyClassroomBundle\Tests\Controller" fullPackage="RMC.SymfonyClassroomBundle.Tests.Controller" tests="1" assertions="0" failures="0" errors="0" time="0.000578">
+      <testcase name="testGetBikeAction" class="RMC\SymfonyClassroomBundle\Tests\Controller\BikeControllerTest" file="/var/www/vhosts/symfonyClassroom/src/RMC/SymfonyClassroomBundle/Tests/Controller/BikeControllerTest.php" line="26" assertions="0" time="0.000578"/>
+    </testsuite>
+  </testsuite>
+</testsuites>

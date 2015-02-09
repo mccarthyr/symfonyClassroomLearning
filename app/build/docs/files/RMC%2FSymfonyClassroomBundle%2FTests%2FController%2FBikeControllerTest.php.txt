@@ -1,0 +1,64 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: richardmccarthy
+ * Date: 25/11/14
+ * Time: 17:05
+ */
+
+namespace RMC\SymfonyClassroomBundle\Tests\Controller;
+
+use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+use Symfony\Component\HttpFoundation\Response;
+
+/**
+ * Class BikeControllerTest
+ *
+ * This will be carrying out Functional Tests against
+ * the REST API.
+ */
+class BikeControllerTest extends WebTestCase
+{
+
+    /**
+     * /api/v1/bikes/{id}
+     */
+    public function testGetBikeAction() {
+
+return;
+
+        $client = static::createClient();
+        $crawler = $client -> request('GET', '/api/v1/bikes/1');
+
+        /*
+         * NOTE: If you know what the JSON result will look like (e.g set up from
+         * pre-defined Fixtures), then could do the following comparison.
+         */
+        /*$this -> assertJsonStringEqualsJsonString(
+                '{"id":1,"name":"prestigioupdatedagain","price":112,"description":"testdesc"}',
+                $client->getResponse()->getContent() );
+        */
+
+
+        // Confirming that the response header is of type JSON
+        $this -> assertTrue(
+            $client -> getResponse()->headers->contains(
+                'Content-Type',
+                'application/json'
+            )
+        );
+
+        // Confirming that the response code is 200
+        $this -> assertEquals(
+            Response::HTTP_OK,
+            $client->getResponse()->getStatusCode()
+        );
+
+        // Confirming that the response is JSON
+        $this -> assertJson($client->getResponse()->getContent());
+
+
+    }
+
+}
+

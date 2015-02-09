@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PDepend>
+  <Packages>
+    <Package name="Acme\DemoBundle">
+      <Stats>
+        <TotalClasses>1</TotalClasses>
+        <ConcreteClasses>1</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>0</Ca>
+        <Ce>1</Ce>
+        <A>0</A>
+        <I>1</I>
+        <D>0</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/var/www/vhosts/symfonyClassroom/src/Acme/DemoBundle/AcmeDemoBundle.php">AcmeDemoBundle</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package>Symfony\Component\HttpKernel\Bundle</Package>
+      </DependsUpon>
+      <UsedBy/>
+    </Package>
+    <Package name="Acme\DemoBundle\Command">
+      <Stats>
+        <TotalClasses>1</TotalClasses>
+        <ConcreteClasses>1</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>0</Ca>
+        <Ce>3</Ce>
+        <A>0</A>
+        <I>1</I>
+        <D>0</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/var/www/vhosts/symfonyClassroom/src/Acme/DemoBundle/Command/HelloWorldCommand.php">HelloWorldCommand</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package>Symfony\Component\Console\Command</Package>
+        <Package>Symfony\Component\Console\Input</Package>
+        <Package>Symfony\Component\Console\Output</Package>
+      </DependsUpon>
+      <UsedBy/>
+    </Package>
+    <Package name="Acme\DemoBundle\Controller">
+      <Stats>
+        <TotalClasses>3</TotalClasses>
+        <ConcreteClasses>3</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>0</Ca>
+        <Ce>4</Ce>
+        <A>0</A>
+        <I>1</I>
+        <D>0</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/var/www/vhosts/symfonyClassroom/src/Acme/DemoBundle/Controller/DemoController.php">DemoController</Class>
+        <Class sourceFile="/var/www/vhosts/symfonyClassroom/src/Acme/DemoBundle/Controller/SecuredController.php">SecuredController</Class>
+        <Class sourceFile="/var/www/vhosts/symfonyClassroom/src/Acme/DemoBundle/Controller/WelcomeController.php">WelcomeController</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package>Acme\DemoBundle\Form</Package>
+        <Package>Symfony\Bundle\FrameworkBundle\Controller</Package>
+        <Package>Symfony\Component\HttpFoundation</Package>
+        <Package>Symfony\Component\Security\Core</Package>
+      </DependsUpon>
+      <UsedBy/>
+    </Package>
+    <Package name="Acme\DemoBundle\DependencyInjection">
+      <Stats>
+        <TotalClasses>1</TotalClasses>
+        <ConcreteClasses>1</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>0</Ca>
+        <Ce>4</Ce>
+        <A>0</A>
+        <I>1</I>
+        <D>0</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/var/www/vhosts/symfonyClassroom/src/Acme/DemoBundle/DependencyInjection/AcmeDemoExtension.php">AcmeDemoExtension</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package>Symfony\Component\Config</Package>
+        <Package>Symfony\Component\DependencyInjection</Package>
+        <Package>Symfony\Component\DependencyInjection\Loader</Package>
+        <Package>Symfony\Component\HttpKernel\DependencyInjection</Package>
+      </DependsUpon>
+      <UsedBy/>
+    </Package>
+    <Package name="Acme\DemoBundle\EventListener">
+      <Stats>
+        <TotalClasses>1</TotalClasses>
+        <ConcreteClasses>1</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>0</Ca>
+        <Ce>3</Ce>
+        <A>0</A>
+        <I>1</I>
+        <D>0</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/var/www/vhosts/symfonyClassroom/src/Acme/DemoBundle/EventListener/ControllerListener.php">ControllerListener</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package>Acme\DemoBundle\Twig\Extension</Package>
+        <Package>Symfony\Component\HttpKernel</Package>
+        <Package>Symfony\Component\HttpKernel\Event</Package>
+      </DependsUpon>
+      <UsedBy/>
+    </Package>
+    <Package name="Acme\DemoBundle\Form">
+      <Stats>
+        <TotalClasses>1</TotalClasses>
+        <ConcreteClasses>1</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>1</Ca>
+        <Ce>1</Ce>
+        <A>0</A>
+        <I>0.5</I>
+        <D>0.5</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/var/www/vhosts/symfonyClassroom/src/Acme/DemoBundle/Form/ContactType.php">ContactType</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package>Symfony\Component\Form</Package>
+      </DependsUpon>
+      <UsedBy>
+        <Package>Acme\DemoBundle\Controller</Package>
+      </UsedBy>
+    </Package>
+    <Package name="Acme\DemoBundle\Twig\Extension">
+      <Stats>
+        <TotalClasses>1</TotalClasses>
+        <ConcreteClasses>1</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>1</Ca>
+        <Ce>2</Ce>
+        <A>0</A>
+        <I>0.66666666666667</I>
+        <D>0.33333333333333</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/var/www/vhosts/symfonyClassroom/src/Acme/DemoBundle/Twig/Extension/DemoExtension.php">DemoExtension</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package></Package>
+        <Package>CG\Core</Package>
+      </DependsUpon>
+      <UsedBy>
+        <Package>Acme\DemoBundle\EventListener</Package>
+      </UsedBy>
+    </Package>
+    <Package name="RMC\SymfonyClassroomBundle\Controller">
+      <Stats>
+        <TotalClasses>4</TotalClasses>
+        <ConcreteClasses>4</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>0</Ca>
+        <Ce>8</Ce>
+        <A>0</A>
+        <I>1</I>
+        <D>0</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/var/www/vhosts/symfonyClassroom/src/RMC/SymfonyClassroomBundle/Controller/BikeController.php">BikeController</Class>
+        <Class sourceFile="/var/www/vhosts/symfonyClassroom/src/RMC/SymfonyClassroomBundle/Controller/BikeSaleController.php">BikeSaleController</Class>
+        <Class sourceFile="/var/www/vhosts/symfonyClassroom/src/RMC/SymfonyClassroomBundle/Controller/DefaultController.php">DefaultController</Class>
+        <Class sourceFile="/var/www/vhosts/symfonyClassroom/src/RMC/SymfonyClassroomBundle/Controller/UserController.php">UserController</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package></Package>
+        <Package>FOS\RestBundle\Controller</Package>
+        <Package>FOS\RestBundle\Request</Package>
+        <Package>RMC\SymfonyClassroomBundle\Entity</Package>
+        <Package>Symfony\Bundle\FrameworkBundle\Controller</Package>
+        <Package>Symfony\Component\HttpFoundation</Package>
+        <Package>Symfony\Component\HttpKernel\Exception</Package>
+        <Package>Symfony\Component\Routing\Exception</Package>
+      </DependsUpon>
+      <UsedBy/>
+    </Package>
+    <Package name="RMC\SymfonyClassroomBundle\DependencyInjection">
+      <Stats>
+        <TotalClasses>2</TotalClasses>
+        <ConcreteClasses>2</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>0</Ca>
+        <Ce>6</Ce>
+        <A>0</A>
+        <I>1</I>
+        <D>0</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/var/www/vhosts/symfonyClassroom/src/RMC/SymfonyClassroomBundle/DependencyInjection/Configuration.php">Configuration</Class>
+        <Class sourceFile="/var/www/vhosts/symfonyClassroom/src/RMC/SymfonyClassroomBundle/DependencyInjection/RMCSymfonyClassroomExtension.php">RMCSymfonyClassroomExtension</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package>Symfony\Component\Config</Package>
+        <Package>Symfony\Component\Config\Definition</Package>
+        <Package>Symfony\Component\Config\Definition\Builder</Package>
+        <Package>Symfony\Component\DependencyInjection</Package>
+        <Package>Symfony\Component\DependencyInjection\Loader</Package>
+        <Package>Symfony\Component\HttpKernel\DependencyInjection</Package>
+      </DependsUpon>
+      <UsedBy/>
+    </Package>
+    <Package name="RMC\SymfonyClassroomBundle\Entity">
+      <Stats>
+        <TotalClasses>6</TotalClasses>
+        <ConcreteClasses>6</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>1</Ca>
+        <Ce>4</Ce>
+        <A>0</A>
+        <I>0.8</I>
+        <D>0.2</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/var/www/vhosts/symfonyClassroom/src/RMC/SymfonyClassroomBundle/Entity/Bike.php">Bike</Class>
+        <Class sourceFile="/var/www/vhosts/symfonyClassroom/src/RMC/SymfonyClassroomBundle/Entity/BikeRepository.php">BikeRepository</Class>
+        <Class sourceFile="/var/www/vhosts/symfonyClassroom/src/RMC/SymfonyClassroomBundle/Entity/BikeSaleManager.php">BikeSaleManager</Class>
+        <Class sourceFile="/var/www/vhosts/symfonyClassroom/src/RMC/SymfonyClassroomBundle/Entity/BikeType.php">BikeType</Class>
+        <Class sourceFile="/var/www/vhosts/symfonyClassroom/src/RMC/SymfonyClassroomBundle/Entity/Groupset.php">Groupset</Class>
+        <Class sourceFile="/var/www/vhosts/symfonyClassroom/src/RMC/SymfonyClassroomBundle/Entity/User.php">User</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package>Doctrine\Common\Collections</Package>
+        <Package>Doctrine\ORM</Package>
+        <Package>FOS\UserBundle\Model</Package>
+        <Package>RMC\SymfonyClassroomBundle\Model</Package>
+      </DependsUpon>
+      <UsedBy>
+        <Package>RMC\SymfonyClassroomBundle\Controller</Package>
+      </UsedBy>
+    </Package>
+    <Package name="RMC\SymfonyClassroomBundle\Form\Type">
+      <Stats>
+        <TotalClasses>1</TotalClasses>
+        <ConcreteClasses>1</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>0</Ca>
+        <Ce>2</Ce>
+        <A>0</A>
+        <I>1</I>
+        <D>0</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/var/www/vhosts/symfonyClassroom/src/RMC/SymfonyClassroomBundle/Form/Type/BikeType.php">BikeType</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package>Symfony\Component\Form</Package>
+        <Package>Symfony\Component\OptionsResolver</Package>
+      </DependsUpon>
+      <UsedBy/>
+    </Package>
+    <Package name="RMC\SymfonyClassroomBundle\Model">
+      <Stats>
+        <TotalClasses>2</TotalClasses>
+        <ConcreteClasses>0</ConcreteClasses>
+        <AbstractClasses>2</AbstractClasses>
+        <Ca>1</Ca>
+        <Ce>0</Ce>
+        <A>1</A>
+        <I>0</I>
+        <D>0</D>
+      </Stats>
+      <ConcreteClasses/>
+      <AbstractClasses>
+        <Class sourceFile="/var/www/vhosts/symfonyClassroom/src/RMC/SymfonyClassroomBundle/Model/BikeSaleManager.php">BikeSaleManager</Class>
+        <Class sourceFile="/var/www/vhosts/symfonyClassroom/src/RMC/SymfonyClassroomBundle/Model/BikeSaleManagerInterface.php">BikeSaleManagerInterface</Class>
+      </AbstractClasses>
+      <DependsUpon/>
+      <UsedBy>
+        <Package>RMC\SymfonyClassroomBundle\Entity</Package>
+      </UsedBy>
+    </Package>
+    <Package name="RMC\SymfonyClassroomBundle">
+      <Stats>
+        <TotalClasses>1</TotalClasses>
+        <ConcreteClasses>1</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>0</Ca>
+        <Ce>1</Ce>
+        <A>0</A>
+        <I>1</I>
+        <D>0</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/var/www/vhosts/symfonyClassroom/src/RMC/SymfonyClassroomBundle/RMCSymfonyClassroomBundle.php">RMCSymfonyClassroomBundle</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package>Symfony\Component\HttpKernel\Bundle</Package>
+      </DependsUpon>
+      <UsedBy/>
+    </Package>
+    <Package name="RMC\SymfonyClassroomBundle\Tests\Controller">
+      <Stats>
+        <TotalClasses>1</TotalClasses>
+        <ConcreteClasses>1</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>0</Ca>
+        <Ce>2</Ce>
+        <A>0</A>
+        <I>1</I>
+        <D>0</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/var/www/vhosts/symfonyClassroom/src/RMC/SymfonyClassroomBundle/Tests/Controller/BikeControllerTest.php">BikeControllerTest</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package>Symfony\Bundle\FrameworkBundle\Test</Package>
+        <Package>Symfony\Component\HttpFoundation</Package>
+      </DependsUpon>
+      <UsedBy/>
+    </Package>
+  </Packages>
+  <Cycles/>
+</PDepend>
