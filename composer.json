@@ -23,7 +23,8 @@
         "friendsofsymfony/rest-bundle": "~1.4",
         "doctrine/doctrine-fixtures-bundle": "2.2.*",
         "doctrine/mongodb-odm": "1.0.*@dev",
-        "doctrine/mongodb-odm-bundle": "3.0.*@dev"
+        "doctrine/mongodb-odm-bundle": "3.0.*@dev",
+        "software-desk/bike-trader-api-bundle": "dev-master"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"
