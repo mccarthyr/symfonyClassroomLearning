@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "fda0220f2d9f85ed0081d2bcb6a9ce6f",
+    "hash": "85fae927e654d05e1ed62ca6f819bb5e",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1098,17 +1098,17 @@
         },
         {
             "name": "friendsofsymfony/rest-bundle",
-            "version": "1.5.0",
+            "version": "1.5.1",
             "target-dir": "FOS/RestBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSRestBundle.git",
-                "reference": "a9377f6a05fb516423d6adf9079c6e5fb41e4799"
+                "reference": "4f9526ddec7fd951433586c45a78a5001d4a6997"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSRestBundle/zipball/a9377f6a05fb516423d6adf9079c6e5fb41e4799",
-                "reference": "a9377f6a05fb516423d6adf9079c6e5fb41e4799",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSRestBundle/zipball/4f9526ddec7fd951433586c45a78a5001d4a6997",
+                "reference": "4f9526ddec7fd951433586c45a78a5001d4a6997",
                 "shasum": ""
             },
             "require": {
@@ -1172,7 +1172,7 @@
             "keywords": [
                 "rest"
             ],
-            "time": "2015-01-27 09:39:58"
+            "time": "2015-02-09 12:18:56"
         },
         {
             "name": "friendsofsymfony/user-bundle",
